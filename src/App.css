@@ -120,6 +120,16 @@
       text-align: center;
     }
 
+  .hero-content h1 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -5%;
+    text-align: center;
+    width: 490px;
+    margin: auto;
+  }
+
     .movie-card{
       min-height: 200px;
       max-height: 200px;
@@ -139,8 +149,13 @@
 @media(max-width:600px) {
 
   .hero{
-    height:258px
+    height:258px;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
   }
+
+  
 
   .hero-content h1{
     width: 100%;
