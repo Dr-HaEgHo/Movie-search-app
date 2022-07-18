@@ -22,17 +22,35 @@ const Home = () => {
       console.log(moviesList2);
   }, []);
     
+    
   useEffect(() => {
     function searchMeal() {
-      if (searchInput === "") {
-        setMoviesList(moviesList);
+        if (searchInput === "") {
+            return moviesList;
       } else {
         const searchList = moviesList.filter((movie) => {
-            return movies.Title.toLowerCase().includes(searchInput.toLowerCase());
-            setMoviesList()
+            return movie.Title.toLowerCase().includes(searchInput.toLowerCase());
+            
         });
 
         setMoviesList(searchList);
+      }
+    }
+
+    searchMeal();
+  }, [searchInput]);
+  
+  useEffect(() => {
+    function searchMeal() {
+        if (searchInput === "") {
+            return moviesList2;
+      } else {
+        const searchList = moviesList2.filter((movie) => {
+            return movie.Title.toLowerCase().includes(searchInput.toLowerCase());
+
+        });
+
+        setMoviesList2(searchList);
       }
     }
 
